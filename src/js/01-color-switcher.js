@@ -3,7 +3,7 @@ function getRandomHexColor() {
   }
   
   document.addEventListener('DOMContentLoaded', function () {
-    let intervalId = null;
+    
     const startButton = document.querySelector('[data-start]');
     const stopButton = document.querySelector('[data-stop]');
 
@@ -11,6 +11,8 @@ function getRandomHexColor() {
         document.body.style.backgroundColor = getRandomHexColor();
       }
   
+    let intervalId = null; 
+    
     startButton.addEventListener('click', () => {
       startButton.disabled = true;
       stopButton.disabled = false;
