@@ -34,7 +34,7 @@ startButton.addEventListener('click', () => {
   const updateCountdown = () => {
     const choosenDate = new Date(dateInput.value);
     const timeToFinish = choosenDate - Date.now();
-    if (timeToFinish < 1000) {
+    if (timeToFinish === 0) {
       valueSpans.forEach(item => item.classList.toggle('end'));
       clearInterval(forTime);
       dateInput.disabled = false;
@@ -64,4 +64,5 @@ const convertMs = ms => {
   return { days, hours, minutes, seconds };
 };
 
-const addLeadingZero = value => `${value}`.padStart(2, '0');
+const addLeadingZero = value => (value < 10 ? `${value}` : `${value}`.padStart(2, '0'));
+
