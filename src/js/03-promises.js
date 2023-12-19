@@ -2,7 +2,7 @@ import Notiflix from 'notiflix';
 import flatpickr from 'flatpickr';
 import "flatpickr/dist/flatpickr.min.css";
 
-document.querySelector('.form').addEventListener('submit', (event) => {
+document.querySelector(".form").addEventListener("submit", (event) => {
   event.preventDefault();
 
   const formData = new FormData(event.target);
